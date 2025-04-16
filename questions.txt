@@ -1,0 +1,50 @@
+📊 General Trends
+How have shark attacks changed over time?
+(e.g., Are they increasing or decreasing? Has media attention affected reporting?)
+
+Which countries or regions have the highest number of shark attacks?
+
+What months or seasons have the highest frequency of attacks?
+
+🚨 Situational Factors
+What human activities are most associated with shark attacks?
+(e.g., surfing, swimming, diving)
+
+Do attacks happen more often to men or women?
+
+What time of day do most attacks occur?
+
+📍 Geographic Patterns
+Where are the global hotspots for shark attacks? (heatmap-style)
+
+Are there specific beaches or coastlines that are more dangerous than others?
+
+🐋 If You Use Shark Tracking Data (like OCEARCH or OBIS):
+📍 Migration & Movement
+What are the migration patterns of certain shark species over the year?
+
+How far do tagged sharks travel, and how fast?
+
+Do sharks return to the same locations year after year?
+
+🧬 Species Behavior
+Do different species have different patterns in location, depth, or temperature preference?
+
+Are some species more active or mobile than others?
+
+🌍 If You Combine with Environmental or Conservation Data:
+Is there a correlation between ocean temperature changes and shark movement?
+
+Which shark species are most at risk of extinction?
+
+How does human activity (like fishing zones) overlap with shark habitats?
+
+Which countries have the highest number of endangered shark species?
+
+🎯 Bonus (For a More Engaging Portfolio Project)
+Can we predict the likelihood of a shark attack based on time, location, and activity?
+(Mini machine learning model idea!)
+
+What misconceptions do people have about shark attacks vs. the actual data?
+(Great for a blog post or data storytelling angle)
+
