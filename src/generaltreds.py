@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as npp
 import matplotlib.pyplot as plt
 from calendar import month_name
-import plotly.express as px
-import pycountry
+
 #%%
 data = pd.read_csv('../data/attacks.csv')
 # %%
@@ -161,31 +160,44 @@ plt.show()
 # %%
 
 #Where are the global hotspots for shark attacks? (heatmap-style)
-country_counts = df['CleanedCountry'].value_counts().reset_index()
-country_counts.columns = ['Country', 'Count']
+df['country'].value_counts()
+# %%
+attacksByCountry = df['country'].value_counts().reset_index()
+attacksByCountry.columns = ['country', 'Count']
+# %%
+filtered_country = attacksByCountry[attacksByCountry['country'] != 'Unknown']
+top10 = filtered_country.head(10)
 
-valid_countries = [country.name for country in pycountry.countries]
-
-
-# Cria o mapa
-fig = px.choropleth(
-    country_counts,
-    locations="Country",
-    locationmode="country names",
-    color="Count",
-    color_continuous_scale="Reds",
-    title="Global Shark Attack Hotspots"
-)
-fig.update_layout(
-    width=1000,  # ou 1200
-    height=600,  # ou 800
-    title="Global Shark Attack Hotspots",
-    title_x=0.5  # centraliza o título
-)
-
-
-fig.show()
-print(df['CleanedCountry'].unique())
-
+# %%
+plt.figure(figsize=(12, 6))
+plt.bar(top10['country'], top10['Count'], color='blue')
+plt.title('Attacks by Country')
+plt.xlabel('Countries')
+plt.ylabel('Attack Numbers')
+plt.xticks(rotation=45, ha='right')
+plt.grid(True, axis='y')
+plt.tight_layout()
+plt.show()
+# %%
+#Are there specific beaches or coastlines that are more dangerous than others?
+df
+# %%
+df['Location'].value_counts
+# %%
+attacksByLocation = df['Location'].value_counts().reset_index()
+attacksByLocation.columns = ['Location', 'Count']
+# %%
+filtered_Location = attacksByLocation[attacksByLocation['Location'] != 'Unknown']
+top10L = filtered_Location.head(10)
+# %%
+plt.figure(figsize=(12, 6))
+plt.bar(top10L['Location'], top10L['Count'], color='blue')
+plt.title('Attacks by Location')
+plt.xlabel('Location')
+plt.ylabel('Attack Numbers')
+plt.xticks(rotation=45, ha='right')
+plt.grid(True, axis='y')
+plt.tight_layout()
+plt.show()
 
 # %%
