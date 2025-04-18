@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as npp
 import matplotlib.pyplot as plt
 from calendar import month_name
+import seaborn as sns
 
 #%%
 data = pd.read_csv('../data/attacks.csv')
@@ -166,11 +167,11 @@ attacksByCountry = df['country'].value_counts().reset_index()
 attacksByCountry.columns = ['country', 'Count']
 # %%
 filtered_country = attacksByCountry[attacksByCountry['country'] != 'Unknown']
-top10 = filtered_country.head(10)
+top10countries = filtered_country.head(10)
 
 # %%
 plt.figure(figsize=(12, 6))
-plt.bar(top10['country'], top10['Count'], color='blue')
+plt.bar(top10countries['country'], top10countries['Count'], color='blue')
 plt.title('Attacks by Country')
 plt.xlabel('Countries')
 plt.ylabel('Attack Numbers')
@@ -201,3 +202,24 @@ plt.tight_layout()
 plt.show()
 
 # %%
+#Which age group (Child/Adult) is most vulnerable to shark attacks? Does this vary by country?
+# %%
+df['AgeGroup'].value_counts()
+filtered_top10 = df[df['country'].isin(top10countries['country'])]
+# %%
+attack_by_age_country = filtered_top10.groupby(['AgeGroup', 'country']).size().reset_index(name='attack_count')
+filtered_Age = attack_by_age_country[attack_by_age_country['AgeGroup'] != 'Unknown']
+# %%
+plt.figure(figsize=(12, 6))
+pivot_table = filtered_Age.pivot(index='AgeGroup', columns='country', values='attack_count').fillna(0)
+
+sns.heatmap(pivot_table, annot=True, cmap='Blues', cbar=True, fmt='g', linewidths=0.5)
+
+plt.title('Attacks by Age Group and Top 10 Countries')
+plt.xlabel('Country')
+plt.ylabel('Age Group')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+# %%
+#Has the male/female victim ratio changed over decades?

@@ -48,3 +48,61 @@ Can we predict the likelihood of a shark attack based on time, location, and act
 What misconceptions do people have about shark attacks vs. the actual data?
 (Great for a blog post or data storytelling angle)
 
+Demographic & Victim Analysis 👥
+Age Trends: Which age group (Child/Adult) is most vulnerable to shark attacks? Does this vary by country or activity?
+
+Gender Differences Over Time: Has the male/female victim ratio changed over decades?
+
+Survival Analysis: Are certain age groups or genders more likely to survive an attack? How does injury severity correlate with survival?
+
+Age vs. Activity: Do children and adults engage in different activities when attacked (e.g., swimming vs. surfing)?
+
+Species & Biology 🦈
+Species-Specific Attacks: Which shark species are most frequently involved in fatal attacks? Are certain species more common in specific regions?
+
+Misidentification: How often is the shark species listed as "Unknown"? Could this correlate with reporting biases?
+
+Species vs. Activity: Do certain species target specific activities (e.g., great whites and surfing)?
+
+Seasonal Migration: Do attacks from migratory species (e.g., bull sharks) spike during certain months?
+
+Environmental & Ecological Factors 🌊
+Water Conditions: Are attacks more frequent in areas with specific environmental features (e.g., murky water, estuaries, coral reefs)?
+
+Proximity to Rivers: Do attacks cluster near river mouths (common bull shark habitats)?
+
+Climate Impact: Has climate change (e.g., rising sea temps) influenced attack frequency or locations over time?
+
+Activity & Human Behavior 🏄
+Activity Risk: Beyond broad categories (surfing/swimming), which specific activities (e.g., spearfishing, kiteboarding) have the highest fatality rates?
+
+Group vs. Solo: Are attacks more likely when people are alone or in groups?
+
+Protective Gear: Do activities involving gear (e.g., wetsuits, dive cages) correlate with lower injury severity?
+
+Temporal Patterns ⏰
+Holidays/Weekends: Do attacks spike during holidays or weekends when beach attendance is higher?
+
+Decadal Trends: How do attack rates compare across decades (e.g., 1990s vs. 2010s)?
+
+Lunar Cycles: Is there a correlation between moon phases (full moon/new moon) and attack frequency?
+
+Geographic & Cultural Insights 🌍
+Urban vs. Remote: Do attacks occur more near urbanized coastlines or remote areas? Does this correlate with rescue response times?
+
+Tourism Impact: Do countries with high tourism (e.g., Australia, South Africa) have disproportionately higher attack rates?
+
+Local Policies: Do regions with shark mitigation strategies (e.g., nets, drones) see fewer attacks over time?
+
+Data Quality & Reporting 📝
+Reporting Bias: How does media coverage (e.g., "Summer of the Shark" in 2001) correlate with spikes in reported incidents?
+
+Missing Data: What percentage of entries have incomplete data (e.g., unknown species, time, or country)? Does this skew trends?
+
+"Invalid" Cases: What defines an "invalid" attack in your dataset? Are these false alarms or misreported incidents?
+
+Predictive & Risk Modeling 🔮
+Risk Score: Can you create a risk score for beaches based on historical attacks, species presence, and human activity?
+
+Fatalities Predictor: What factors (e.g., species, injury type, response time) best predict whether an attack will be fatal?
+
